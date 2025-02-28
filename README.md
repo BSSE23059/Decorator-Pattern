@@ -28,9 +28,6 @@ This project demonstrates the **Decorator Design Pattern** in C#. It allows dyna
 ## Running the Program
 ```sh
 # Clone the repository
-git clone <>
-
-# Navigate to the project directory
-cd Decorator_PatterN
+git clone <https://github.com/BSSE23059/Decorator-Pattern>
 
 # Build and run the application
