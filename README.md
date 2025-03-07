@@ -10,7 +10,6 @@ A pizza store uses a factory to create different types of pizzas (Cheese, Veggie
 ## Table of Contents
 - [Introduction](#introduction)
 - [Implementation](#implementation)
-- [Running the Program](#running-the-program)
 
 ## Introduction
 ** The **Simple Factory Pattern** is a creational design pattern that provides a simple way to create objects without explicitly specifying their concrete classes. It centralizes object creation in a single factory class.**.
@@ -35,7 +34,6 @@ This project demonstrates the **Factory Method Pattern** in C# is a creational d
 ## Table of Contents
 - [Introduction](#introduction)
 - [Implementation](#implementation)
-- [Running the Program](#running-the-program)
 
 ## Introduction
 
