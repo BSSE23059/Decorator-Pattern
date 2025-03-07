@@ -1,9 +1,11 @@
-# Decorator-Pattern
+# Factory Patterns
 
-# Observer Pattern in C#
+# Simple Factory Pattern in C#
 
 ## Overview
-This project demonstrates the **Decorator Design Pattern** in C#. It allows dynamic addition of functionalities (like Milk and Sugar) to a base coffee object without modifying its structure.**.
+This project demonstrates the **Simple Factory Pattern** in C#. The Simple Factory Pattern centralizes object creation in a single factory class. It uses a method to create instances of objects based on a parameter, hiding the creation logic from the client. While not part of the Gang of Four (GoF) design patterns, it’s a common starting point for understanding factories.**.
+### Example
+A pizza store uses a factory to create different types of pizzas (Cheese, Veggie, etc.).
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -11,23 +13,44 @@ This project demonstrates the **Decorator Design Pattern** in C#. It allows dyna
 - [Running the Program](#running-the-program)
 
 ## Introduction
-** The **Decorator Pattern**  is a structural design pattern that allows behavior to be added to an individual object without modifying its structure.**.
-1. **Coffee Interface (`ICoffee`)** – Defines methods for coffee descriptions and costs.  
-2. **SimpleCoffee Class (`SimpleCoffee`)** – A basic coffee implementation.  
-3. **CoffeeDecorator (Abstract Class) (`CoffeeDecorator`)** – The base decorator class.  
-4. **MilkDecorator & SugarDecorator (`MilkDecorator`, `SugarDecrator`)** – Concrete decorators adding milk and sugar to coffee dynamically.  
-5. **Client (`Program.cs`)** – Demonstrates the use of the decorators.  
+** The **Simple Factory Pattern** is a creational design pattern that provides a simple way to create objects without explicitly specifying their concrete classes. It centralizes object creation in a single factory class.**.
+1. **Pizza Interface (`IPizza`)** – Defines methods for pizza descriptions.  
+2. **Concrete Pizza Class (`CheesePizza`,`VeggiePizza`, etc.)** – Basic pizza implementations. 
+3. **SimplePizzaFactory Class (`SimplePizzaFactory`)** – The factory class that creates pizza instances.  
+4. **PizzaStoreClass (`PizzaStore`)** – The client that uses the factory. 
+5. **Client (`Program.cs`)** – Demonstrates the use of the factory.  
 
 ## Implementation
-- The `ICoffee` interface defines the core methods for coffee objects.
-- The `SimpleCoffee` class provides a basic implementation of a coffee. 
-- The `CoffeeDecorator` class serves as a base for all decorators, allowing them to modify the behavior of the coffee object they wrap.
-- The` MilkDecorator` and `SugarDecorator` classes extend the functionality of the coffee by adding their respective descriptions and costs.
-- The `Program` class demonstrates how to create a coffee, decorate it, and print the results.
+- The `IPizza` interface defines the core methods for pizza objects.
+- The `CheesePizza`, `VeggiePizza`, `ClamPizza`, and `PepperoniPizza` classes provide basic implementations of different pizza types.
+- The `SimplePizzaFactory` class serves as the central factory, creating instances of pizza based on a type parameter.
+- The `PizzaStore` class acts as the client, ordering pizzas through the factory.
+- The `Program` class demonstrates how to create and order pizzas using the factory.
 
-## Running the Program
-```sh
-# Clone the repository
-git clone <https://github.com/BSSE23059/Decorator-Pattern>
+# Factory Method Pattern in C#
 
-# Build and run the application
+## Overview
+This project demonstrates the **Factory Method Pattern** in C# is a creational design pattern that defines an abstract method for creating objects, allowing subclasses to decide which class to instantiate. It promotes loose coupling and extensibility.**.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Implementation](#implementation)
+- [Running the Program](#running-the-program)
+
+## Introduction
+
+1. **Car Interface (`ICar`)** – Defines methods for car details.
+2. **Concrete Car Classes (`Sedan`,`SUV`)** – Basic car implementations. 
+3. **CarFactory Class(Abstract Class) (`SimplePizzaFactory`)** – The abstract creator with a factory method. 
+4. **SedanFactory & SUVFactory (`SedanFactory`, `SUVFactory`)** – Concrete factories for specific car types.
+5. **Dealership Class (`Dealership`)** – The client that uses the factories.
+6. **Client (`Program.cs`)** – Demonstrates the use of the factory method.  
+
+## Implementation
+- The `ICar` interface defines the core methods for car objects.
+- The `Sedan` and `SUV` classes provide basic implementations of different car types.
+- The `CarFactory` abstract class defines the factory method CreateCar and additional logic.
+- The `SedanFactory` and SUVFactory classes implement the factory method to create specific cars.
+- The `Dealership` class acts as the client, selling cars using the factories.
+- The `Program` class demonstrates how to create and sell cars using different factories.
+
