@@ -52,3 +52,30 @@ This project demonstrates the **Factory Method Pattern** in C# is a creational d
 - The `Dealership` class acts as the client, selling cars using the factories.
 - The `Program` class demonstrates how to create and sell cars using different factories.
 
+# Abstract Factory Pattern in C#
+
+## Overview
+This project demonstrates the **Abstract Factory Pattern** in C# is a creational design pattern that creates families of related objects without specifying their concrete classes. It ensures that products from the same family are compatible.**.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Implementation](#implementation)
+
+## Introduction
+
+1. **Engine Interface (`IEngine`)** – Defines methods for engine details.
+2. **Body Interface (`IBody`)** – Defines methods for body details.
+3. **Concrete Product Classes (`SportsEngine`,`SportsBody`, `TruckEngine` and `TruckBody`)** – Implementations of engine and body types. 
+4. **IVehicleFactory Interface (`IVehicleFactory`)** – The abstract factory interface.
+5. **SportsCarFactory & TruckFactory (`SportsCarFactory`, `TruckFactory`)** – Concrete factories for specific vehicle families.
+6. **VehicleManufacturer Class (`VehicleManufacturer`)** – The client that uses the factories.
+7. **Client (`Program.cs`)** – Demonstrates the use of the abstract factories. 
+
+## Implementation
+- The `IEngine` and IBody interfaces define the core methods for vehicle components.
+- The `SportsEngine`, `SportsBody`, `TruckEngine`, and `TruckBody` classes provide implementations of different component types.
+- The `IVehicleFactory` interface defines methods to create families of products (engine and body).
+- The `SportsCarFactory` and `TruckFactory` classes implement the factory interface to create specific families of components.
+- The `VehicleManufacturer` class acts as the client, assembling vehicles using the factories.
+- The `Program` class demonstrates how to create and assemble vehicles using different factories.
+
